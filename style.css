@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Imprima', sans-serif;
+    color: white;
+}
+
+.background-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    height: 15vh;
+    /* justify-content: space-between; */
+    /* margin-right: 2vh; */
+}
+
+nav img {
+    width: 12vw;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#random-dish-container {
+    display: flex;
+}
+
+#random-dish {
+    background-color: #ba9901;
+    width: 40vh;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+    font-size: 1.2em;
+    transform: rotate(20deg);
+}
+
+#random-dish img {
+    width: 35vh;
+    margin-bottom: 1.2em;
+}
+
+#special-dish {
+    margin-top: 10vh;
+}
+
+#special-dish h1 {
+    transform: rotate(20deg);
+    font-size: 2.5em;
+    position: relative;
+    top: -10%;
+    left: -60%;
+    text-decoration: 3px underline solid #f1c400;
+    color: #f1c400;
+    font-family: 'Irish Grover';
+}
+
+#special-dish p {
+    position: relative;
+    top: 15vh;
+    left: 26vh;
+    font-size: 1.2em;
+    transform: rotate(20deg);
+    text-align: center;
+}
+
+#search-by-category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.5em;
+    margin-top: 15vh;
+}
+
+#search-by-category>div {
+    margin-top: 8vh;
+}
+
+#search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#search-box p {
+    margin-bottom: 2vh;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    height: 4vh;
+}
+
+.search-box input {
+    width: 30vh;
+    margin-right: 10px;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

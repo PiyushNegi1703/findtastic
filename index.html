@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findtastic</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<!-- Background Image -->
+    <img src="./assets/background.png" alt="" class="background-img">
+
+<!-- Nav Bar (Contains Logo and Tagline Text) -->
+    <nav>
+        <img src="./assets/logo.png" alt="">
+
+        <p>What to make today? Finding answer of this question? No need for <br>
+            you to do that anymore, leave that to us.
+        </p>
+    </nav>
+
+    <section id="main-container">
+        <div id="search-by-category">
+            <p>Get a random dish for your meal</p>
+
+            <div id="search-box">
+                <p>Search for a category <br>
+                    and get various dishes in that category.</p>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Enter your desired category" id="search-category"/>
+
+                    <button type="button" name="Search" onclick="getDishByCategory()">Search</button>
+                </div>
+            </div>
+            <div>
+                <p>Your Searched Category's Dishes -</p>
+            </div>
+        </div>
+
+        <div id="random-dish-container">
+            <div id="special-dish">
+                <img src="./assets/Vector 1.png" alt="">
+                <h1>Your Special Dish</h1>
+                <p>Click on the dish to get the <br>
+                    ingredients.
+                </p>
+            </div>
+
+            <div id="random-dish">
+                <div>
+                    <img src="https://www.themealdb.com/images/media/meals/wurrux1468416624.jpg" alt="">
+                </div>
+        
+                <div>
+                    <h1>Cream Cheese Tart</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section>
+        <div id="dish-by-category">
+            <div>
+                <img src="https://www.themealdb.com/images/media/meals/wurrux1468416624.jpg" alt="">
+                <h4>Cream Cheese Tart</h4>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <script src="./app.js"></script> -->
+</body>
+</html>
