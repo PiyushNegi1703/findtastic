@@ -10,25 +10,18 @@
 </head>
 <body>
 
-<!-- Background Image -->
-    <img src="./assets/background.png" alt="" class="background-img">
-
 <!-- Nav Bar (Contains Logo and Tagline Text) -->
     <nav>
         <img src="./assets/logo.png" alt="">
 
-        <p>What to make today? Finding answer of this question? No need for <br>
-            you to do that anymore, leave that to us.
-        </p>
+        <h4>What to make today..? <br> Finding answer of this question? <br> No need for you to do that anymore, leave that to us.
+        </h4>
     </nav>
 
     <section id="main-container">
         <div id="search-by-category">
-            <p>Get a random dish for your meal</p>
-
             <div id="search-box">
-                <p>Search for a category <br>
-                    and get various dishes in that category.</p>
+                <p>Search for a category</p>
 
                 <div class="search-box">
                     <input type="text" placeholder="Enter your desired category" id="search-category"/>
@@ -36,9 +29,8 @@
                     <button type="button" name="Search" onclick="getDishByCategory()">Search</button>
                 </div>
             </div>
-            <div>
-                <p>Your Searched Category's Dishes -</p>
-            </div>
+
+            <div id="searched-category"></div>
         </div>
 
         <div id="random-dish-container">
@@ -50,27 +42,30 @@
                 </p>
             </div>
 
-            <div id="random-dish">
-                <div>
-                    <img src="https://www.themealdb.com/images/media/meals/wurrux1468416624.jpg" alt="">
-                </div>
-        
-                <div>
-                    <h1>Cream Cheese Tart</h1>
-                </div>
+            <div id="random-dish" onclick="openModal()">
             </div>
         </div>
     </section>
 
-    <!-- <section>
-        <div id="dish-by-category">
-            <div>
-                <img src="https://www.themealdb.com/images/media/meals/wurrux1468416624.jpg" alt="">
-                <h4>Cream Cheese Tart</h4>
-            </div>
-        </div>
-    </section> -->
+    <section class="category-section">
+        <div id="dish-by-category"></div>
+    </section>
 
-    <!-- <script src="./app.js"></script> -->
+    <section class="modal-container"></section>
+
+    <footer>
+        <p>Made with HTML, CSS and Vanilla Javascript by Piyush 😆</p>
+
+        <div id="social-media">
+            <p>Social Media</p>
+            <a href="https://www.linkedin.com/in/negi-2k05" target="_blank">
+                <img src="./assets/github.svg" alt="" class="svg">
+            </a>
+            <a href="https://github.com/PiyushNegi1703" target="_blank">
+                <img src="./assets/linkedin-in.svg" alt="" class="svg">
+            </a>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
 </body>
 </html>
