@@ -64,6 +64,17 @@ nav img {
     font-size: 1.1em;
     transform: rotate(20deg);
     text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#random-dish h1 {
+    max-width: 35vh;
+}
+
+#random-dish:hover {
+    transform: rotate(0deg);
+    background-color: #f1c400;
 }
 
 #random-dish:active {
@@ -74,7 +85,6 @@ nav img {
     width: 35vh;
     height: 32vh;
     margin-bottom: 1.5vh;
-    cursor: pointer;
 }
 
 #special-dish {
@@ -163,10 +173,8 @@ nav img {
 }
 
 #dish-by-category {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: 10vh;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 5vh;
 }
@@ -205,16 +213,14 @@ nav img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal {
-    position: relative;
-    left: 40%;
-    top: 10%;
     background-color: white;
     width: 40vh;
-    height: fit-content;
     padding: 2vh 1vh;
     text-align: center;
     display: flex;
@@ -264,6 +270,8 @@ footer {
     align-items: center;
     justify-content: space-around;
     color: black;
+    width: 100%;
+    margin-top: 10vh;
 }
 
 #social-media {
@@ -303,7 +311,7 @@ footer {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        height: 70vh;
+        height: 72vh;
         margin-left: 1vh;
         margin-right: 1vh;
     }
@@ -386,13 +394,14 @@ footer {
     }
 
     #dish-by-category {
-        margin: 0 5vh;
+        margin: 0;
+        justify-content: center;
     }
     
     .card-container {
         background-color: #ba9901;
         width: 15vh;
-        height: 20vh;
+        height: 22vh;
         font-size: 0.5em;
     }
 
@@ -404,4 +413,48 @@ footer {
     .meal-name {
         width: 10vh;
     }
+
+    footer {
+        margin-top: 5vh;
+        font-size: 0.6em;
+        justify-content: unset;
+        height: 3vh;
+        padding-left: 2%;
+    }
+
+    #social-media {
+        width: 25%;
+        margin-left: 8%;
+    }
+
+    .svg {
+        width: 10px;
+        margin: 0;
+    }
+
+    .modal {
+        width: 35vh;
+    }
+    
+    .modal h4 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+    .modal ul {
+        list-style: none;
+        /* margin-top: 2vh; */
+        font-size: 1em;
+    }
+    
+    .modal span {
+        position: relative;
+        font-size: 1em;
+        right: -15vh;
+    }
+    
+    .modal img {
+        width: 25vh;
+    }
+    
 }

@@ -14,7 +14,7 @@ function getRandomDish() {
             document.querySelector('.modal-container').style.display = 'none'
             document.getElementById('random-dish').onclick = () => {
                 var modal = document.querySelector('.modal-container')
-                modal.style.display = 'block'
+                modal.style.display = 'flex'
                 modal.innerHTML = `
             <div class="modal">
             
@@ -54,30 +54,36 @@ getRandomDish();
 
 function getDishByCategory() {
     var inputValue = document.getElementById('search-category').value
+    var searchByCategory = document.getElementById('searched-category')
+    var dishByCategory = document.getElementById('dish-by-category')
 
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${inputValue}`).then((resp) => {
-        console.log(resp)
-        var dishByCategory = document.getElementById('dish-by-category')
-        data = ''
+        if(resp.data.meals != null){
+            console.log(resp)
+            data = ''
 
-        resp.data.meals.forEach((e) => {
-            // console.log(e)
-            data += `
-            <div class="card-container">
-                <div>
-                    <img src="${e.strMealThumb}" alt="">
+            resp.data.meals.forEach((e) => {
+                // console.log(e)
+                data += `
+                <div class="card-container">
+                    <div>
+                        <img src="${e.strMealThumb}" alt="">
+                    </div>
+                    <div class="meal-name">
+                        <h1>${e.strMeal}</h1>
+                    </div>            
                 </div>
-                <div class="meal-name">
-                    <h1>${e.strMeal}</h1>
-                </div>            
-            </div>
-            `
-        })
-        dishByCategory.innerHTML = data;
+                `
+            })
 
-        var searchByCategory = document.getElementById('searched-category')
-        searchByCategory.innerHTML = `<p>Your Searched Category's Dishes -</p>`
+            dishByCategory.innerHTML = data;
 
+            searchByCategory.innerHTML = `<p>Your Searched Category's Dishes -</p>`
+        }
+
+        else{
+            searchByCategory.innerHTML = 'Please enter a valid food category'
+        }
     })
 }
 
