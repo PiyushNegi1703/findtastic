@@ -342,6 +342,10 @@ footer {
         cursor: pointer;
     }
 
+    #random-dish h1 {
+        max-width: 15vh;
+    }
+
     #special-dish {
         margin-top: 0;
     }
