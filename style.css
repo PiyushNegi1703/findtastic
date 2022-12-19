@@ -185,6 +185,7 @@ nav img {
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
     text-align: center;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .card-container img {
