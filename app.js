@@ -77,6 +77,7 @@ function getDishByCategory() {
         // else it will ask to enter a valid food category
         else{
             searchByCategory.innerHTML = 'Please enter a valid food category'
+            dishByCategory.innerHTML = ''
         }
     })
 }
