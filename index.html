@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Findtastic</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="#">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -18,36 +19,41 @@
         </h4>
     </nav>
 
+<!-- This section contains the Random Dish and and the Search Box -->
     <section id="main-container">
+
+        <!-- Search Box -->
         <div id="search-by-category">
             <div id="search-box">
                 <p>Search for a category</p>
 
                 <div class="search-box">
                     <input type="text" placeholder="Enter your desired category" id="search-category"/>
-
                     <button type="button" name="Search" onclick="getDishByCategory()">Search</button>
                 </div>
             </div>
 
+            <!-- This div contains the text "Your Searched Category's Dishes" -->
             <div id="searched-category"></div>
         </div>
 
+        <!-- This div contains the Random Dish -->
         <div id="random-dish-container">
             <div id="special-dish">
                 <img src="./assets/Vector 1.png" alt="">
                 <h1>Your Special Dish</h1>
             </div>
 
-            <div id="random-dish" onclick="openModal()">
-            </div>
+            <div id="random-dish" onclick="openModal()"></div>
         </div>
     </section>
 
+<!-- This section contains all the dishes which come after search -->
     <section class="category-section">
         <div id="dish-by-category"></div>
     </section>
 
+<!-- This section contains the Modal which shows the ingredients -->
     <section class="modal-container">
         <div class="modal">
                             
@@ -62,6 +68,7 @@
         </div>
     </section>
 
+<!-- This is the footer -->
     <footer>
         <p>Made with HTML, CSS and Vanilla Javascript by Piyush 😆</p>
 
@@ -75,6 +82,7 @@
             </a>
         </div>
     </footer>
+
     <script src="./app.js"></script>
 </body>
 </html>
